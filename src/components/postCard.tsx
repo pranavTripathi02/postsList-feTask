@@ -15,6 +15,14 @@ function PostCard({
     toggleModal();
   };
 
+  const formatDateFromTimestamp = (): string => {
+    const date = new Date(post.date * 1000);
+    const day = date.toLocaleString("default", { day: "2-digit" });
+    const month = date.toLocaleString("default", { month: "short" });
+    const year = date.getFullYear();
+    return month + " " + day + ", " + year;
+  };
+
   return (
     <div className="post">
       {/* image */}
@@ -58,7 +66,7 @@ function PostCard({
             )}
           </div>
           {/* date */}
-          <div className="footer-date">{post.date}</div>
+          <div className="footer-date">{formatDateFromTimestamp()}</div>
         </div>
       </div>
     </div>

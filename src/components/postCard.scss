@@ -1,7 +1,8 @@
-$col-desc:#999;
-$col-footer:#8f8f8f;
-$col-icon1:darkturquoise;
-$col-icon2:gold;
+$col-desc: #999;
+$col-footer: #8f8f8f;
+$col-icon1: darkturquoise;
+$col-icon2: gold;
+
 .post {
   display: flex;
   flex-direction: column;
@@ -15,6 +16,8 @@ $col-icon2:gold;
 
   .post-content {
     display: flex;
+    height: 100%;
+    justify-content: space-between;
     flex-direction: column;
     padding: 1.5rem 2rem;
   }
@@ -56,13 +59,13 @@ $col-icon2:gold;
   }
 
   .post-description {
-    color:$col-desc;
+    color: $col-desc;
     font-weight: 400;
     margin: 0 0 1.5rem 0;
   }
 
   .post-footer {
-    color:$col-footer;
+    color: $col-footer;
     font-weight: 400;
     display: flex;
     justify-content: space-between;
@@ -73,7 +76,6 @@ $col-icon2:gold;
     }
   }
 
-
   .post-img-container {
     position: relative;
     background: black;
@@ -83,7 +85,6 @@ $col-icon2:gold;
       object-fit: cover;
       height: 250px;
       width: 100%;
-      z-index: 1;
 
       &:hover {
         cursor: pointer;
@@ -103,8 +104,6 @@ $col-icon2:gold;
     }
 
   }
-
-
 
   &:hover,
   &:focus-within {
