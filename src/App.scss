@@ -5,6 +5,10 @@
 
 $breakpoint-sm: 700px;
 
+body:has(.modal[open]) {
+  overflow: hidden;
+}
+
 main {
   margin: 150px 0;
 }
