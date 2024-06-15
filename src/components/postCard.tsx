@@ -1,17 +1,33 @@
 import { TPost } from "../types";
 import "./postCard.scss";
 
-function PostCard({ post }: { post: TPost }) {
+function PostCard({
+  post,
+  setSelectedPost,
+  toggleModal,
+}: {
+  post: TPost;
+  setSelectedPost: React.Dispatch<React.SetStateAction<TPost | null>>;
+  toggleModal: () => void;
+}) {
+  const handleOpenModal = () => {
+    setSelectedPost(post);
+    toggleModal();
+  };
+
   return (
     <div className="post">
       {/* image */}
-      <div className="post-image-container">
+      <div
+        className="post-img-container"
+        onClick={handleOpenModal}
+      >
         <img
           src={post.thumbnailSmall}
           alt={`Image for ${post.title}`}
           className="post-img"
         />
-        <span className="post-image-text">Learn More</span>
+        <span className="post-img-text">Learn More</span>
       </div>
       {/* content */}
       <div className="post-content">
@@ -21,7 +37,12 @@ function PostCard({ post }: { post: TPost }) {
           <span className="icon2" />
         </div>
         {/* title */}
-        <div className="post-title">{post.title}</div>
+        <div
+          className="post-title"
+          onClick={handleOpenModal}
+        >
+          {post.title}
+        </div>
         {/* description */}
         <div className="post-description">{post.content}</div>
         {/* footer */}

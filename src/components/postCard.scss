@@ -74,7 +74,7 @@ $col-icon2:gold;
   }
 
 
-  .post-image-container {
+  .post-img-container {
     position: relative;
     background: black;
 
@@ -90,7 +90,7 @@ $col-icon2:gold;
       }
     }
 
-    .post-image-text {
+    .post-img-text {
       cursor: pointer;
       visibility: hidden;
       position: absolute;
@@ -112,7 +112,7 @@ $col-icon2:gold;
       opacity: 50%;
     }
 
-    .post-image-text {
+    .post-img-text {
       visibility: visible;
       z-index: 2;
     }
