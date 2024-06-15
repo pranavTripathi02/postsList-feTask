@@ -39,7 +39,7 @@ const PostModal = forwardRef<HTMLDialogElement, TProps>((props, ref) => {
       </header>
       <div className="modal-img-container">
         <img
-          src={post.thumbnailLarge}
+          srcSet={`${post.thumbnailSmall} 720w, ${post.thumbnailLarge}`}
           alt={`Image for ${post.title}`}
           className="modal-img"
         />
