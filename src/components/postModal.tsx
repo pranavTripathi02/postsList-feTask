@@ -1,5 +1,6 @@
 import { TPost } from "../types";
 import { forwardRef } from "react";
+import "./postModal.scss";
 
 type TProps = {
   post: TPost;
