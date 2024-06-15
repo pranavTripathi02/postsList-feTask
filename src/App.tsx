@@ -2,6 +2,7 @@ import "./App.scss";
 import { useEffect, useState } from "react";
 import getPosts from "./api/posts/posts";
 import { TPost } from "./types/index.ts";
+import PostCard from "./components/postCard";
 
 function App() {
   const [posts, setPosts] = useState<TPost[]>([]);
@@ -9,7 +10,18 @@ function App() {
     getPosts().then((res) => setPosts(res));
   }, []);
 
-  return <div>Hi</div>;
+  return (
+    <main>
+      <div className="posts-container">
+        {posts.map((post) => (
+          <PostCard
+            post={post}
+            key={post.id}
+          />
+        ))}
+      </div>
+    </main>
+  );
 }
 
 export default App;

@@ -3,3 +3,22 @@
   margin: 0 auto;
 }
 
+$breakpoint-sm: 700px;
+
+main {
+  margin: 150px 0;
+}
+
+.posts-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  gap: 2rem;
+
+  @media screen and (max-width:$breakpoint-sm) {
+    & {
+      grid-template-columns: 1fr;
+    }
+  }
+}
