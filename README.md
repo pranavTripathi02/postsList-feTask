@@ -4,6 +4,8 @@
 ![Static Badge](https://img.shields.io/badge/SCSS-1e1e1e?style=flat-square&logo=sass)
 ![Static Badge](https://img.shields.io/badge/Vite-1e1e1e?style=flat-square&logo=vite)
 
+[Click here](https://cosmic-pika-680476.netlify.app/) to view deployed app.
+
 # Prerequisites
 
 Install [node](https://nodejs.org/en/download/).  
