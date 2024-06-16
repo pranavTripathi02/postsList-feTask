@@ -11,7 +11,7 @@ function dtoToPost(dto: TPostDto): TPost {
     thumbnailSmall: dto.thumbnail.small,
     thumbnailLarge: dto.thumbnail.large,
     authorName: dto.author.name,
-    authorAvatar: dto.author.avatar,
+    authorAvatar: dto.author.avatar ?? "/broken-link.png",
     authorRole: dto.author.role,
   };
 }

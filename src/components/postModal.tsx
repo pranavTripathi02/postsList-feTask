@@ -52,6 +52,9 @@ const PostModal = forwardRef<HTMLDialogElement, TProps>((props, ref) => {
             src={post.authorAvatar}
             alt={`User ${post.authorName} image`}
             className="author-avatar-img"
+            onError={(e) => {
+              e.currentTarget.src = "/broken-link.png";
+            }}
           />
         </div>
         <div>
